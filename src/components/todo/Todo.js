@@ -42,8 +42,7 @@ const Todo = () => {
                 onChange={handleChange}
              />
             <button onClick={handleAddTodos} className='btn1'>Add</button>
-        </div>
-        <ul>
+            <ul>
             {items.length !==0 ? 
             items.map((listItems, index) => (
                 <li key={index}>{listItems}
@@ -52,6 +51,8 @@ const Todo = () => {
             ))
             : <p>No items</p>}
         </ul>
+        </div>
+        
         
     </div>
   )

@@ -4,11 +4,18 @@ body {
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .todo-container {
     background: linear-gradient(rgb(184, 243, 243), rgb(175, 175, 249));
     /* background: linear-gradient(45deg, red, blue); */
-    height: 100vh;
+    height: 80vh;
+    width: 50vw;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5);;
+    
 }
 ul li {
     font-size: 0.8rem;
