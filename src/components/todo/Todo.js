@@ -22,11 +22,11 @@ const Todo = () => {
    const handleAddTodos = () => {
     if (input === '') {
         return;
-    } else {
-        const newList = [...items, input]
-        setItems(newList);
-        setInput('')
-    }
+    } 
+    const newList = {text: input, checked: false}
+    setItems([...items, newList]);
+    setInput('')
+    
    }
    // function delete to do item 
    const handleDeleteTodo = (id) => {
@@ -36,9 +36,11 @@ const Todo = () => {
 
    const handleCheckBox = (id) => {
     const checkedItem = items.map((itemlist, index) => 
-        index === id ? {...items, checked: !itemlist.checked} : items
+        index === id ? { ...itemlist, checked: !itemlist.checked } : itemlist
     )
+    
     setItems(checkedItem)
+    console.log(checkedItem)
    }
 
   return (
