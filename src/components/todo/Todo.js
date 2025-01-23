@@ -4,7 +4,12 @@ import './todo.css'
 
 const Todo = () => {
    const [input, setInput] = useState('');
-   const [items, setItems] = useState(['Make breakfast', 'Write Essay'])
+   const [items, setItems] = useState(
+    [
+        {text: 'Write Essay', checked: false},
+        {text: 'Send Email', checked: false}
+    ]
+)
 
    
    const handleChange = (e) => {
@@ -27,7 +32,13 @@ const Todo = () => {
    const handleDeleteTodo = (id) => {
     const updtatedItems = items.filter((__, index) => index !== id)
     setItems(updtatedItems)
+   }
 
+   const handleCheckBox = (id) => {
+    const checkedItem = items.map((itemlist, index) => 
+        index === id ? {...items, checked: !itemlist.checked} : items
+    )
+    setItems(checkedItem)
    }
 
   return (
@@ -45,8 +56,14 @@ const Todo = () => {
             <ul>
             {items.length !==0 ? 
             items.map((listItems, index) => (
-                <li key={index}>{listItems}
-                <button onClick={()=>handleDeleteTodo(index)} className='btn2'>delete</button>
+                <li key={index}>{listItems.text}
+                    <input 
+                    type='checkbox'
+                    checked={listItems.checked}
+                    className='checked'
+                    onChange={() => handleCheckBox(index)}
+                    />
+                    <button onClick={()=>handleDeleteTodo(index)} className='btn2'>delete</button>
                 </li>
             ))
             : <p>No items</p>}

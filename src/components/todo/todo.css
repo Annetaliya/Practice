@@ -50,3 +50,6 @@ ul li {
     outline: none;
 
 }
+.checked {
+    margin-left: 10px;
+}
