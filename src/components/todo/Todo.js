@@ -4,10 +4,11 @@ import './todo.css'
 
 const Todo = () => {
    const [input, setInput] = useState('');
+   const [priority, setPriority] =  useState('Medium')
    const [items, setItems] = useState(
     [
-        {text: 'Write Essay', checked: false},
-        {text: 'Send Email', checked: false}
+        {text: 'Write Essay', checked: false, priority},
+        {text: 'Send Email', checked: false, priority}
     ]
 )
 
@@ -18,12 +19,16 @@ const Todo = () => {
     console.log(input)
    }
 
+   const handlePriorityChange = (e) => {
+    setPriority(e.target.value)
+   }
+
    //function used to add todo items
    const handleAddTodos = () => {
     if (input === '') {
         return;
     } 
-    const newList = {text: input, checked: false}
+    const newList = {text: input, checked: false, priority}
     setItems([...items, newList]);
     setInput('')
     
@@ -54,17 +59,26 @@ const Todo = () => {
                 value={input}
                 onChange={handleChange}
              />
+             <select value={priority} onChange={handlePriorityChange}>
+                <option value='High'>High</option>
+                <option value='Medium'>Medium</option>
+                <option value='Low'>Low</option>
+             </select>
             <button onClick={handleAddTodos} className='btn1'>Add</button>
             <ul>
             {items.length !==0 ? 
             items.map((listItems, index) => (
-                <li key={index}>{listItems.text}
+                <li key={index} className={`${listItems.priority.toLowerCase()}`}>
+                    <span style={{textDecoration: listItems.checked ? 'line-through' : 'none'}}>
+                        {listItems.text}- <strong>{listItems.priority}</strong>
+                    </span>
                     <input 
                     type='checkbox'
                     checked={listItems.checked}
                     className='checked'
                     onChange={() => handleCheckBox(index)}
                     />
+                    
                     <button onClick={()=>handleDeleteTodo(index)} className='btn2'>delete</button>
                 </li>
             ))

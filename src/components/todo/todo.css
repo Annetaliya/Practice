@@ -36,6 +36,7 @@ ul li {
     padding: 4px 6px;
     border-radius: 6px;
     font-size: 0.8rem;
+    color: black;
 }
 .input-container {
     padding-top: 20px;
@@ -52,4 +53,16 @@ ul li {
 }
 .checked {
     margin-left: 10px;
+}
+.high {
+    color: red;
+    font-weight: 500;
+}
+.medium {
+    color: rgb(124, 181, 37);
+    font-weight: 500;
+}
+.low {
+    color: blue;
+    font-weight: 500;
 }
