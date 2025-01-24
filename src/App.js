@@ -25,6 +25,7 @@ import Weather from './components/Weather/Weather';
 import './App.css'
 import {Routes, Route} from 'react-router-dom'
 import Todo from './components/todo/Todo';
+import TrialTodo from './components/TrialTodo/TrialTodo';
 
 export default function App() {
   
@@ -54,6 +55,7 @@ export default function App() {
       {/* <ScrollToSection /> */}
       {/* <Weather /> */}
       <Todo />
+      {/* <TrialTodo /> */}
       
     </div>
   );
