@@ -22,16 +22,18 @@ import UseWindowResizeTest from './components/use-window-resize/UseWindowResizeT
 import ScrollToTop from './components/scroll-to-top/ScrollToTop';
 import ScrollToSection from './components/scroll-to-top/ScrollToSection';
 import Weather from './components/Weather/Weather';
-import './App.css'
+
 import {Routes, Route} from 'react-router-dom'
 import Todo from './components/todo/Todo';
 import TrialTodo from './components/TrialTodo/TrialTodo';
 import Counter from './components/Counter';
+import TextBox from './components/TextBox';
+import Form from './components/Form';
 
 export default function App() {
   
   return (
-    <div className="App">
+    <div >
       {/* <Accordian /> */}
       {/* <Random /> */}
       {/* <Practice /> */}
@@ -58,6 +60,8 @@ export default function App() {
       {/* <Todo /> */}
       {/* <TrialTodo /> */}
       <Counter />
+      <TextBox />
+      <Form />
       
     </div>
   );
