@@ -26,6 +26,7 @@ import './App.css'
 import {Routes, Route} from 'react-router-dom'
 import Todo from './components/todo/Todo';
 import TrialTodo from './components/TrialTodo/TrialTodo';
+import Counter from './components/Counter';
 
 export default function App() {
   
@@ -54,8 +55,9 @@ export default function App() {
       {/* <ScrollToTop /> */}
       {/* <ScrollToSection /> */}
       {/* <Weather /> */}
-      <Todo />
+      {/* <Todo /> */}
       {/* <TrialTodo /> */}
+      <Counter />
       
     </div>
   );
