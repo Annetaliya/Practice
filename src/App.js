@@ -29,6 +29,8 @@ import TrialTodo from './components/TrialTodo/TrialTodo';
 import Counter from './components/Counter';
 import TextBox from './components/TextBox';
 import Form from './components/Form';
+import Profiles from './components/Profiles';
+import Counter2 from './components/Counter2';
 
 export default function App() {
   
@@ -62,6 +64,8 @@ export default function App() {
       <Counter />
       <TextBox />
       <Form />
+      <Profiles />
+      <Counter2 />
       
     </div>
   );
