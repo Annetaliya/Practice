@@ -31,6 +31,9 @@ import TextBox from './components/TextBox';
 import Form from './components/Form';
 import Profiles from './components/Profiles';
 import Counter2 from './components/Counter2';
+import CharacterCounter from './components/CharacterCounter';
+import PasswordMatch from './components/PasswordMatch';
+import DisableSubmit from './components/DisbleSubmit';
 
 export default function App() {
   
@@ -66,6 +69,9 @@ export default function App() {
       <Form />
       <Profiles />
       <Counter2 />
+      <CharacterCounter />
+      <PasswordMatch />
+      <DisableSubmit />
       
     </div>
   );
