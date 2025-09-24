@@ -7,7 +7,7 @@ function CharacterCounter () {
 
     function handleChange (e) {
         setText(e.target.value)
-        setCounter((prev) => prev - text.length)
+        setCounter(counter - text.length)
 
     }
     return (
